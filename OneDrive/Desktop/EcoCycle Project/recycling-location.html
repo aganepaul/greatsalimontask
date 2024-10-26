@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Center Locations</title>
+    <link rel="stylesheet" href="recycling-location.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Recycling Centers Near You</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search by name or location">
+            <div class="filter">
+                <label><input type="checkbox" id="plastic-filter"> Plastic</label>
+                <label><input type="checkbox" id="paper-filter"> Paper</label>
+                <label><input type="checkbox" id="metal-filter"> Metal</label>
+                <label><input type="checkbox" id="glass-filter"> Glass</label>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div id="map"></div>
+
+        <!-- List of Recycling Centers -->
+        <div class="recycling-centers">
+            <!-- Example, dynamically populated later -->
+            <div class="center-info" id="center-1">
+                <h3>Green Earth Recycling Center</h3>
+                <p>Accepted Materials: Plastic, Paper</p>
+                <p>Operating Hours: Mon-Fri 8 AM - 5 PM</p>
+                <p>Contact: +123456789</p>
+                <a href="https://maps.google.com" target="_blank">Get Directions</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="recycling-location.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNcEB80HBo9c_6brit0DEOFEjJcs4m5Ek&callback=initMap" async defer></script>
+</body>
+</html>

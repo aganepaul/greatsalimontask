@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCycle - User Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">
+        <h1>EcoCycle</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="registration.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Login Form Section -->
+  <section class="login">
+    <h2>Welcome Back!</h2>
+    <form class="login-form" action="#" method="POST" id="loginForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="remember-me">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label>
+      </div>
+
+      <button type="submit" class="cta-button">Login</button>
+      <p id="error-message" class="error-message" style="display:none;">Invalid credentials. Please try again.</p>
+    </form>
+    <p><a href="forgot-password.html">Forgot your password?</a></p>
+    <p>Don't have an account? <a href="registration.html">Sign up here</a>.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024 EcoCycle. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    // Example JavaScript for handling error feedback (replace with your actual logic)
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission for demo
+      
+      // Mock login validation
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Simple validation for demonstration
+      if (email !== "user@example.com" || password !== "password") {
+        document.getElementById('error-message').style.display = 'block';
+      } else {
+        document.getElementById('error-message').style.display = 'none';
+        // Proceed with actual login logic
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCycle - Register</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+  <!-- Header with EcoCycle logo -->
+  <header>
+    <h1>EcoCycle</h1>
+  </header>
+
+  <!-- Registration Form -->
+  <main>
+    <section class="registration-form">
+      <h2>Register and Join the EcoCycle</h2>
+      
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required aria-required="true">
+          <small class="error-message" id="nameError"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+          <small class="error-message" id="emailError"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required aria-required="true">
+          <small class="error-message" id="passwordError"></small>
+          <div id="passwordStrength"></div> <!-- Password strength indicator -->
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true">
+          <small class="error-message" id="confirmPasswordError"></small>
+        </div>
+
+        <!-- Create Account Button -->
+        <button type="submit">Create Account</button>
+      </form>
+
+      <!-- Login Redirect -->
+      <p>Already have an account? <a href="login.html">Login</a></p>
+
+      <!-- Social Login Options -->
+      <div class="social-login">
+        <p>Or sign up with:</p>
+        <a href="https://www.facebook,com"><button class="social-btn google">Google</button></a>
+        <a href="https://www.google.com"><button class="social-btn facebook">Facebook</button></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 EcoCycle. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for form validation -->
+  <script src="registration.js"></script>
+</body>
+</html>

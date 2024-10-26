@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection Request</title>
+    <link rel="stylesheet" href="waste-collection.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Request Waste Collection</h1>
+        <form id="waste-collection-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <div class="error-message hidden" id="name-error">Name is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <div class="error-message hidden" id="email-error">Please enter a valid email.</div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+                <div class="error-message hidden" id="phone-error">Please enter a valid phone number.</div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <div class="error-message hidden" id="address-error">Address is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="waste-type">Type of Waste:</label>
+                <select id="waste-type" required>
+                    <option value="">Select...</option>
+                    <option value="organic">Organic</option>
+                    <option value="recyclables">Recyclables</option>
+                    <option value="hazardous">Hazardous</option>
+                    <option value="general">General Waste</option>
+                </select>
+                <div class="error-message hidden" id="waste-type-error">Please select a waste type.</div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" required></textarea>
+                <div class="error-message hidden" id="description-error">Description is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="collection-date">Collection Date:</label>
+                <input type="date" id="collection-date" required>
+                <div class="error-message hidden" id="collection-date-error">Collection date is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="collection-time">Collection Time:</label>
+                <input type="time" id="collection-time" required>
+                <div class="error-message hidden" id="collection-time-error">Collection time is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="instructions">Additional Instructions:</label>
+                <textarea id="instructions" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit Request</button>
+        </form>
+        <div id="confirmation-message" class="hidden"></div>
+    </div>
+
+    <div id="dashboard-updates" class="hidden">
+        <h2>Dashboard Updates</h2>
+        <p>Your recent waste collection request has been logged:</p>
+        <ul id="dashboard-list"></ul>
+    </div>
+
+    <script src="waste-collection.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Collection Scheduling</title>
+    <link rel="stylesheet" href="waste-schedule.css">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNcEB80HBo9c_6brit0DEOFEjJcs4m5Ek&callback=initMap" async defer></script>
+</head>
+<body>
+    <div class="waste-scheduling">
+        <h2>Schedule Your Waste Collection</h2>
+        <p>Select a convenient date, time, and location for waste pickup.</p>
+
+        <form id="schedule-form">
+            <!-- Date Picker -->
+            <label for="pickup-date">Select Date:</label>
+            <input type="date" id="pickup-date" name="pickup-date" required>
+
+            <!-- Time Picker -->
+            <label for="pickup-time">Select Time:</label>
+            <input type="time" id="pickup-time" name="pickup-time" required>
+
+            <!-- Location Input -->
+            <label for="pickup-location">Pickup Location:</label>
+            <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter your address or choose on the map" required>
+
+            <!-- Map -->
+            <div id="map" style="width: 100%; height: 300px; margin-bottom: 20px;"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="cta-button">Schedule Pickup</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmation-message" style="display: none;">
+            <p>Thank you! Your waste collection has been scheduled successfully.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="waste-schedule.js"></script>
+</body>
+</html>

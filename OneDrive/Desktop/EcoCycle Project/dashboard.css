@@ -1,0 +1,175 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #333;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+nav ul li a.active {
+  background-color: #4CAF50;
+}
+
+.dashboard-container {
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.dashboard-overview, .request-list, .profile-management, .user-statistics {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Profile Management Form */
+#profile-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#profile-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+#profile-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#profile-form button:hover {
+  background-color: #45a049;
+}
+
+/* User Statistics */
+.user-statistics p {
+  margin: 10px 0;
+}
+
+/* Buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+
+/* Large screens */
+@media (min-width: 992px) {
+  .dashboard-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+
+  .dashboard-overview, .request-list, .profile-management, .user-statistics {
+      grid-column: span 1;
+  }
+}
+
+/* Tablets and small laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .dashboard-container {
+      display: block;
+  }
+
+  .dashboard-overview, .request-list, .profile-management, .user-statistics {
+      margin: 10px 0;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      width: 100%;
+  }
+
+  nav ul li a {
+      text-align: center;
+      padding: 14px 0;
+  }
+
+  .dashboard-container {
+      padding: 10px;
+  }
+
+  .dashboard-overview, .request-list, .profile-management, .user-statistics {
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: none;
+  }
+
+  table, th, td {
+      font-size: 14px;
+  }
+}

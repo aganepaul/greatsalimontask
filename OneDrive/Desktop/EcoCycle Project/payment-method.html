@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Update Payment Method</title>
+    <link rel="stylesheet" href="payment-method.css">
+</head>
+<body>
+    <header>
+        <h1>Add/Update Payment Method</h1>
+    </header>
+
+    <main>
+        <section class="payment-method-container">
+            <h2>Payment Details</h2>
+            <form id="payment-form">
+                <div>
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" required>
+                        <option value="">Select a method</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="PayPal">PayPal</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+                <div>
+                    <label for="expiry-date">Expiration Date:</label>
+                    <input type="month" id="expiry-date" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="123" required maxlength="3">
+                </div>
+                <button type="submit">Save Payment Method</button>
+            </form>
+            <div id="message"></div>
+        </section>
+    </main>
+
+    <script src="payment-method.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - EcoCycle</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="waste-collection-request.html">Request Collection</a></li>
+            <li><a href="waste-collection-history.html">Collection History</a></li>
+            <li><a href="waste-schedulling.html">Waste Scheduling</a></li>
+            <li><a href="recycling-education.html">Recycling Education</a></li>
+            <li><a href="recycling-location.html">Recycling Centers</a></li>
+            <li><a href="payment-method.html">Payment Methods</a></li>
+            <li><a href="payment-history.html">Payment History</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="notification.html">Notifications</a></li>
+            <li><a href="user-profile.html">Profile</a></li>
+            <li><a href="user-setting.html">Settings</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <h1>Welcome, [User Name]</h1>
+        <div class="dashboard-overview">
+            <h2>Dashboard Overview</h2>
+            <p>Total Waste Collection Requests: <strong>5</strong></p>
+            <p>Pending Requests: <strong>2</strong></p>
+            <p>Completed Requests: <strong>3</strong></p>
+            <button onclick="location.href='waste-collection-request.html'">Create New Request</button>
+        </div>
+
+        <!-- List of Waste Collection Requests -->
+        <div class="request-list">
+            <h2>Your Waste Collection Requests</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type of Waste</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>October 10, 2024</td>
+                        <td>Plastic Waste</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>October 12, 2024</td>
+                        <td>Organic Waste</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>October 15, 2024</td>
+                        <td>Paper Waste</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Profile Management -->
+        <div class="profile-management">
+            <h2>Manage Your Profile</h2>
+            <form id="profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="[User Name]">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="[User Email]">
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+
+        <!-- Optional: User Statistics -->
+        <div class="user-statistics">
+            <h2>Your Statistics</h2>
+            <p>Total Waste Collected: <strong>15 kg</strong></p>
+            <p>Total Impact: <strong>5 trees saved</strong></p>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCycle Waste Tracking</title>
+   <link rel="stylesheet" href="waste-tracking.css">
+</head>
+<body>
+    <h1>EcoCycle Waste Tracking</h1>
+
+    <!-- Status Indicators -->
+    <div class="status">
+        <div>
+            <div class="status-indicator pending"></div>
+            <p>Pending</p>
+        </div>
+        <div>
+            <div class="status-indicator in-progress"></div>
+            <p>In Progress</p>
+        </div>
+        <div>
+            <div class="status-indicator completed"></div>
+            <p>Completed</p>
+        </div>
+    </div>
+
+    <!-- Google Map -->
+   <h1>Waste Tracking</h1>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+
+    <div id="status-controls">
+        <h3>Update Waste Collection Status</h3>
+        <p>Select a waste collection point by clicking its marker, then update its status:</p>
+        <button onclick="updateStatus('pending')">Mark as Pending</button>
+        <button onclick="updateStatus('in-progress')">Mark as In Progress</button>
+        <button onclick="updateStatus('completed')">Mark as Completed</button>
+    </div>
+    
+
+    <script src="waste-tracking.js"></script>
+
+    <!-- Google Maps API (replace YOUR_API_KEY with your actual Google Maps API key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNcEB80HBo9c_6brit0DEOFEjJcs4m5Ek&callback=initMap" async defer></script>
+</body>
+</html>
