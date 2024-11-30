@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, "frontend")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Database Connection
 mongoose
@@ -39,7 +39,7 @@ app.use("/api/tasks", taskRoutes); // Task routes
 
 // Serve React/Frontend index.html for all non-API routes
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "index.html"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Error Handling Middleware
